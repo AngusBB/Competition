@@ -10,6 +10,12 @@
 
 !cd Competition
 
+### Clone mmdetection
+
+!git clone https://github.com/open-mmlab/mmdetection.git
+
+
+
 ### install reqirements
 
 !pip install -r requirements.txt
