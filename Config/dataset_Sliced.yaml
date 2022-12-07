@@ -1,0 +1,5 @@
+path: /home/student/yueh_huangje_2022/Drone/mmdetection/Datasett
+train: images/train
+val: images/val
+nc: 4
+names: ['car', 'hov', 'person', 'motorcycle']

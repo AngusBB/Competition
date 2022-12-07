@@ -3,18 +3,19 @@ import os
 import shutil
 import cv2
 from tqdm import tqdm
+import random
 
 
-print('1. Renaming Training Dataset_v5 --> Training_Dataset_v5')
-OfficialTrainingDatasetRoot = 'Dataset/Training_Dataset_v5/'
+print('1. Renaming Training Dataset_v5 --> Origin_Training_Dataset')
+OfficialTrainingDatasetRoot = 'Dataset/Origin_Training_Dataset/'
 os.rename('Dataset/Training Dataset_v5', OfficialTrainingDatasetRoot)
 
 
-print(f'2. Backing-up Labels to {OfficialTrainingDatasetRoot}labels_origin/...')
+print(f'2. Backing-up Labels to {OfficialTrainingDatasetRoot}origin_labels/...')
 os.mkdir(f'{OfficialTrainingDatasetRoot}labels_origin')
 LabelsList = sorted(glob.glob(f'{OfficialTrainingDatasetRoot}train/*.txt'))
 for labels in tqdm(LabelsList):
-    shutil.copy(labels, f'{OfficialTrainingDatasetRoot}labels_origin')
+    shutil.copy(labels, f'{OfficialTrainingDatasetRoot}origin_labels')
 
 
 print('3. Formatting Official Labels to yolo Type...')
@@ -42,11 +43,26 @@ for labels in tqdm(LabelsList):
     f.close()
 
 
-print(f'4. Moving Labels to {OfficialTrainingDatasetRoot}labels')
-os.mkdir(f'{OfficialTrainingDatasetRoot}labels')
+print(f'4. Moving Labels to {OfficialTrainingDatasetRoot}train/labels...')
+os.mkdir(f'{OfficialTrainingDatasetRoot}train/labels')
 for labels in tqdm(LabelsList):
-    os.rename(labels, f'{OfficialTrainingDatasetRoot}labels/' + labels.split('/')[-1])
+    os.rename(labels, f'{OfficialTrainingDatasetRoot}train/labels/' + labels.split('/')[-1])
 
 
-print(f'5. Renaming {OfficialTrainingDatasetRoot}train --> {OfficialTrainingDatasetRoot}images')
-os.rename(f'{OfficialTrainingDatasetRoot}train', f'{OfficialTrainingDatasetRoot}images')
+print(f'5. Moving images to {OfficialTrainingDatasetRoot}train/images...')
+os.mkdir(f'{OfficialTrainingDatasetRoot}train/images')
+ImagesList = sorted(glob.glob(f'{OfficialTrainingDatasetRoot}train/*.png'))
+for images in tqdm(ImagesList):
+    os.rename(images, f'{OfficialTrainingDatasetRoot}train/images/' + images.split('/')[-1])
+
+
+print('6. Start Splitting 10% of Training Data to Val Data...')
+os.mkdir(f'{OfficialTrainingDatasetRoot}val')
+os.mkdir(f'{OfficialTrainingDatasetRoot}val/images')
+os.mkdir(f'{OfficialTrainingDatasetRoot}val/labels')
+val_index = random.sample(range(1, 1000), 100)
+for index in tqdm(val_index):
+    os.rename(f'{OfficialTrainingDatasetRoot}train/images/img{index:04d}.png',
+              f'{OfficialTrainingDatasetRoot}val/images/img{index:04d}.png')
+    os.rename(f'{OfficialTrainingDatasetRoot}train/labels/img{index:04d}.txt',
+              f'{OfficialTrainingDatasetRoot}val/labels/img{index:04d}.txt')
