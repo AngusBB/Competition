@@ -46,6 +46,7 @@ for Class in Classes:
     print('Plotting... ')
     clf = KMeans(n_clusters=3)
     clf.fit(data)
+    plt.figure(figsize=(5, 5))
     for i in tqdm(range(0, len(data))):
 
         if clf.labels_[i] == 0:
