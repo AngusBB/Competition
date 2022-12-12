@@ -56,7 +56,8 @@ for Class in Classes:
         elif clf.labels_[i] == 2:
             plt.scatter(data[i][0], data[i][1], color='green', s=3)
 
+
     plt.autoscale()
     plt.grid()
-    plt.savefig(f'3-means_{Class}.png', bbox_inches='tight')
+    plt.savefig(f'Output/AnalyzeBBox_3-means_{Class}.png', bbox_inches='tight')
     # plt.show()

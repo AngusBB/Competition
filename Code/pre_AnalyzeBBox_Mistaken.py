@@ -2,7 +2,7 @@ import glob
 import matplotlib.pyplot as plt
 import numpy as np
 
-LabelsList = sorted(glob.glob('Dataset/Origin_Training_Dataset/labels_origin/*'))
+LabelsList = sorted(glob.glob('Dataset/Origin_Training_Dataset/origin_labels/*'))
 
 data = []
 
@@ -39,4 +39,4 @@ def plotting(bbox):
 
 
 plotting(data)
-plt.savefig('Analyze-Mistaken_BBox.png')
+plt.savefig('Output/AnalyzeBBox_Mistaken.png')
