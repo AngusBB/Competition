@@ -12,7 +12,7 @@ os.rename('Dataset/Training Dataset_v5', OfficialTrainingDatasetRoot)
 
 
 print(f'2. Backing-up Labels to {OfficialTrainingDatasetRoot}origin_labels/...')
-os.mkdir(f'{OfficialTrainingDatasetRoot}labels_origin')
+os.mkdir(f'{OfficialTrainingDatasetRoot}origin_labels')
 LabelsList = sorted(glob.glob(f'{OfficialTrainingDatasetRoot}train/*.txt'))
 for labels in tqdm(LabelsList):
     shutil.copy(labels, f'{OfficialTrainingDatasetRoot}origin_labels')
