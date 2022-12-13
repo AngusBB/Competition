@@ -2,11 +2,11 @@ import glob
 from tqdm import tqdm
 import cv2
 
-sr_dataset_root = "Dataset/SuperResolution_Training_Dataset/"
+sr_dataset_root = "Dataset/"
 
-ImagesList = sorted(glob.glob(sr_dataset_root + "train/*.png")) \
-             + sorted(glob.glob(sr_dataset_root + "public/*.png")) \
-             + sorted(glob.glob(sr_dataset_root + "private/*.png"))
+ImagesList = sorted(glob.glob(sr_dataset_root + "SuperResolution_Training_Dataset/*.png")) \
+             + sorted(glob.glob(sr_dataset_root + "SuperResolution_Public_Dataset/*.png")) \
+             + sorted(glob.glob(sr_dataset_root + "SuperResolution_PublicPrivate_Dataset/*.png"))
 
 print('Super-resolving all images to 3840x2160...')
 for image in tqdm(ImagesList):

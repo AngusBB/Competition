@@ -1,4 +1,4 @@
-path: ../Dataset/SuperResolution_Training_Sliced
+path: ../Dataset/SuperResolution_Training_Sliced_Augmentation
 train: images/train
 val: images/val
 nc: 4

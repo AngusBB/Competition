@@ -6,6 +6,7 @@ tqdm
 imagesize
 sahi
 scikit-learn
+ensemble_boxes
 
 # yolo ------------------------------------------------------------------------
 # base

@@ -75,6 +75,6 @@ for i in tqdm(range(1000)):
         cv2.imwrite(SuperResolutionTrainImages_list[i], ImageMask)
 
     # print(bboxes)
-    f = open(f'{CorrectLabels_root}/ALL/img{(i+1):04d}.txt', 'w')
+    f = open(f'Dataset/SuperResolution_Training_Dataset/img{(i+1):04d}.txt', 'w')
     f.writelines(bboxes)
     f.close()

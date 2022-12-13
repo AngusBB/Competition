@@ -1,4 +1,4 @@
-path: ../Dataset/training_SuperResolution
+path: ../Dataset/Origin_Training_Dataset
 train: images/train
 val: images/val
 nc: 4
