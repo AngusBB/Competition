@@ -2,6 +2,7 @@
 # Usage: pip install -r requirements.txt
 
 # preprocessing ---------------------------------------------------------------
+jupyter
 tqdm
 imagesize
 sahi
