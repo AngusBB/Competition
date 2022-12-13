@@ -2,7 +2,7 @@
 
 ## 0. Pre-processing：
 
-### Clone Project
+###0-1. Clone Project
 
 ````
 conda create --name drone python=3.8
@@ -10,25 +10,25 @@ git clone https://github.com/AngusBB/Competition.git
 cd Competition
 ````
 
-### Clone YOLOv5
+### 0-2. Clone YOLOv5
 
 ````
 git clone https://github.com/ultralytics/yolov5.git
 ````
 
-### Clone MMDetection
+### 0-3. Clone MMDetection
 
 ````
 git clone https://github.com/open-mmlab/mmdetection.git
 ````
 
-### Install Reqirements
+### 0-4. Install Reqirements
 
 ````
 pip install -r requirements.txt
 ````
 
-### Download Dataset
+### 0-5. Download Dataset
 
 ````
 mkdir Dataset
@@ -92,3 +92,6 @@ Please place our custom dataset in following structure.
    ├── README.md
    └── requirements.txt
 ````
+
+### 1. Fulfill the project
+Follow the steps in main.ipynb
