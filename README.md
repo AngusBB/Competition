@@ -83,7 +83,7 @@ Please place our custom dataset in following structure.
    │      │   ├── img1503.png
    │      │   └── ...
    │      │
-   │      └── Model
+   │      └── Models
    │          ├── baseline.pt
    │          └── 832x832.pt
    │   
