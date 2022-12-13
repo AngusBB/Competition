@@ -43,53 +43,52 @@ Please place our custom dataset in following structure.
 ````
 \Competition
    ├── Dataset
-   │   │   ├── Training Dataset_v5
-   │   │   │   ├── train
-   │   │   │   │   ├── img0001.png
-   │   │   │   │   ├── img0001.txt
-   │   │   │   │   ├── img0002.png
-   │   │   │   │   ├── img0002.txt
-   │   │   │   │   └── ...
-   │   │   │   │
-   │   │   │   └── classes.txt
-   │   │   │
-   │   │   ├── public
-   │   │   │   ├── img1001.png
-   │   │   │   ├── img1002.png
-   │   │   │   ├── img1003.png
-   │   │   │   └── ...
-   │   │   │
-   │   │   ├── Private Testing Dataset_v2
-   │   │   │   ├── img1501.png
-   │   │   │   ├── img1502.png
-   │   │   │   ├── img1503.png
-   │   │   │   └── ...
-   │   │   │
-   │   │   ├── SuperResolution_Training_Dataset
-   │   │   │   ├── img0001.png
-   │   │   │   ├── img0002.png
-   │   │   │   ├── img0003.png
-   │   │   │   └── ...
-   │   │   │
-   │   │   ├── SuperResolution_Public_Dataset
-   │   │   │   ├── img1001.png
-   │   │   │   ├── img1002.png
-   │   │   │   ├── img1003.png
-   │   │   │   └── ...
-   │   │   │
-   │   │   ├── SuperResolution_PublicPrivate_Dataset
-   │   │   │   ├── img1501.png
-   │   │   │   ├── img1502.png
-   │   │   │   ├── img1503.png
-   │   │   │   └── ...
-   │   │   │
-   │   │   └── Model
-   │   │       ├── baseline.pt
-   │   │       └── 832x832.pt
-   │
-   ├── 
-   ├── 
-   ├── 
-   ├── 
-   └──   ...
+   │      ├── Training Dataset_v5
+   │      │   ├── train
+   │      │   │   ├── img0001.png
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.png
+   │      │   │   ├── img0002.txt
+   │      │   │   └── ...
+   │      │   │
+   │      │   └── classes.txt
+   │      │
+   │      ├── public
+   │      │   ├── img1001.png
+   │      │   ├── img1002.png
+   │      │   ├── img1003.png
+   │      │   └── ...
+   │      │
+   │      ├── Private Testing Dataset_v2
+   │      │   ├── img1501.png
+   │      │   ├── img1502.png
+   │      │   ├── img1503.png
+   │      │   └── ...
+   │      │
+   │      ├── SuperResolution_Training_Dataset
+   │      │   ├── img0001.png
+   │      │   ├── img0002.png
+   │      │   ├── img0003.png
+   │      │   └── ...
+   │      │
+   │      ├── SuperResolution_Public_Dataset
+   │      │   ├── img1001.png
+   │      │   ├── img1002.png
+   │      │   ├── img1003.png
+   │      │   └── ...
+   │      │
+   │      ├── SuperResolution_PublicPrivate_Dataset
+   │      │   ├── img1501.png
+   │      │   ├── img1502.png
+   │      │   ├── img1503.png
+   │      │   └── ...
+   │      │
+   │      └── Model
+   │          ├── baseline.pt
+   │          └── 832x832.pt
+   │   
+   ├── Code
+   ├── main.ipynb
+   ├── README.md
+   └── requirements.txt
 ````
