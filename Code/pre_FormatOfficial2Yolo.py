@@ -43,26 +43,24 @@ for labels in tqdm(LabelsList):
     f.close()
 
 
-print(f'4. Moving Labels to {OfficialTrainingDatasetRoot}train/labels...')
-os.mkdir(f'{OfficialTrainingDatasetRoot}train/labels')
+print(f'4. Moving Labels to {OfficialTrainingDatasetRoot}labels...')
+os.mkdir(f'{OfficialTrainingDatasetRoot}labels')
+os.mkdir(f'{OfficialTrainingDatasetRoot}labels/train')
 for labels in tqdm(LabelsList):
-    os.rename(labels, f'{OfficialTrainingDatasetRoot}train/labels/' + labels.split('/')[-1])
+    os.rename(labels, f'{OfficialTrainingDatasetRoot}labels/train/' + labels.split('/')[-1])
 
 
-print(f'5. Moving images to {OfficialTrainingDatasetRoot}train/images...')
-os.mkdir(f'{OfficialTrainingDatasetRoot}train/images')
-ImagesList = sorted(glob.glob(f'{OfficialTrainingDatasetRoot}train/*.png'))
-for images in tqdm(ImagesList):
-    os.rename(images, f'{OfficialTrainingDatasetRoot}train/images/' + images.split('/')[-1])
+print(f'5. Moving images to {OfficialTrainingDatasetRoot}images...')
+os.mkdir(f'{OfficialTrainingDatasetRoot}images/')
+os.rename(f'{OfficialTrainingDatasetRoot}train/', f'{OfficialTrainingDatasetRoot}images/train/')
 
 
 print('6. Start Splitting 10% of Training Data to Val Data...')
-os.mkdir(f'{OfficialTrainingDatasetRoot}val')
-os.mkdir(f'{OfficialTrainingDatasetRoot}val/images')
-os.mkdir(f'{OfficialTrainingDatasetRoot}val/labels')
+os.mkdir(f'{OfficialTrainingDatasetRoot}images/val')
+os.mkdir(f'{OfficialTrainingDatasetRoot}labels/val')
 val_index = random.sample(range(1, 1000), 100)
 for index in tqdm(val_index):
-    os.rename(f'{OfficialTrainingDatasetRoot}train/images/img{index:04d}.png',
-              f'{OfficialTrainingDatasetRoot}val/images/img{index:04d}.png')
-    os.rename(f'{OfficialTrainingDatasetRoot}train/labels/img{index:04d}.txt',
-              f'{OfficialTrainingDatasetRoot}val/labels/img{index:04d}.txt')
+    os.rename(f'{OfficialTrainingDatasetRoot}images/train/img{index:04d}.png',
+              f'{OfficialTrainingDatasetRoot}images/val/img{index:04d}.png')
+    os.rename(f'{OfficialTrainingDatasetRoot}labels/train/img{index:04d}.txt',
+              f'{OfficialTrainingDatasetRoot}labels/val/img{index:04d}.txt')
