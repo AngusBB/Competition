@@ -5,33 +5,33 @@
 ### Clone Project
 
 ````
-!conda create --name drone python=3.8
-!git clone https://github.com/AngusBB/Competition.git
-!cd Competition
+conda create --name drone python=3.8
+git clone https://github.com/AngusBB/Competition.git
+cd Competition
 ````
 
 ### Clone YOLOv5
 
 ````
-!git clone https://github.com/ultralytics/yolov5.git
+git clone https://github.com/ultralytics/yolov5.git
 ````
 
 ### Clone MMDetection
 
 ````
-!git clone https://github.com/open-mmlab/mmdetection.git
+git clone https://github.com/open-mmlab/mmdetection.git
 ````
 
 ### Install Reqirements
 
 ````
-!pip install -r requirements.txt
+pip install -r requirements.txt
 ````
 
 ### Download Dataset
 
 ````
-!mkdir Dataset
+mkdir Dataset
 ````
 
 Please place the official dataset in following structure.
