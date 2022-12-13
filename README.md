@@ -84,7 +84,9 @@ Please place our custom dataset in following structure.
    │   │   │   └── ...
    │   │   │
    │   │   └── Model
-   ├── 
+   │   │       ├── baseline.pt
+   │   │       └── 832x832.pt
+   │
    ├── 
    ├── 
    ├── 
