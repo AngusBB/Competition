@@ -41,7 +41,7 @@ with open('Output/output' + ''.join(char for char in (DetectList[-1].split('/')[
 
     writer = csv.writer(csvfile)
 
-    for file in DetectAnswerList:
+    for file in tqdm(DetectAnswerList):
 
         img = cv2.imread(ImageList[int(file.split('/')[-1].split('.')[0][3:]) - 1001])
         height, width = img.shape[:2]

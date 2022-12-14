@@ -121,6 +121,7 @@ def get_args():
     parser.add_argument(
         "-p",
         "--path",
+        default="Dataset/SuperResolution_Training_Dataset",
         type=str,
         help="Absolute path for 'train.txt' or 'test.txt', or the root dir for images.",
     )
@@ -158,6 +159,6 @@ def main(opt):
     print("Finished!")
 
 
-if __name__ == "__pre_FormatYolo2Coco__":
+if __name__ == "__main__":
     options = get_args()
     main(options)
