@@ -65,6 +65,32 @@ Please place our custom dataset in following structure.
    │      │   ├── img1503.png
    │      │   └── ...
    │      │
+   │      ├── CorrectLabels
+   │      │   ├── car
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.txt
+   │      │   │   ├── img0003.txt
+   │      │   │   └── ...
+   │      │   │   
+   │      │   ├── hov
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.txt
+   │      │   │   ├── img0003.txt
+   │      │   │   └── ...
+   │      │   │   
+   │      │   ├── motorcycle
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.txt
+   │      │   │   ├── img0003.txt
+   │      │   │   └── ...
+   │      │   │   
+   │      │   └── person
+   │      │       ├── img0001.txt
+   │      │       ├── img0002.txt
+   │      │       ├── img0003.txt
+   │      │       └── ...
+   │      │   
+   │      │
    │      ├── SuperResolution_Training_Dataset
    │      │   ├── img0001.png
    │      │   ├── img0002.png
