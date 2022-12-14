@@ -2,10 +2,12 @@
 
 ## 0. Pre-processing：
 
-###0-1. Clone Project
+### 0-1. Clone Project
 
 ````
 conda create --name drone python=3.8
+conda activate drone
+
 git clone https://github.com/AngusBB/Competition.git
 cd Competition
 ````
@@ -64,6 +66,32 @@ Please place our custom dataset in following structure.
    │      │   ├── img1502.png
    │      │   ├── img1503.png
    │      │   └── ...
+   │      │
+   │      ├── CorrectLabels
+   │      │   ├── car
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.txt
+   │      │   │   ├── img0003.txt
+   │      │   │   └── ...
+   │      │   │   
+   │      │   ├── hov
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.txt
+   │      │   │   ├── img0003.txt
+   │      │   │   └── ...
+   │      │   │   
+   │      │   ├── motorcycle
+   │      │   │   ├── img0001.txt
+   │      │   │   ├── img0002.txt
+   │      │   │   ├── img0003.txt
+   │      │   │   └── ...
+   │      │   │   
+   │      │   └── person
+   │      │       ├── img0001.txt
+   │      │       ├── img0002.txt
+   │      │       ├── img0003.txt
+   │      │       └── ...
+   │      │   
    │      │
    │      ├── SuperResolution_Training_Dataset
    │      │   ├── img0001.png
