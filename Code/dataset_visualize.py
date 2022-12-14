@@ -3,7 +3,7 @@ dataset_type = 'CocoDataset'
 classes = ('car', 'hov', 'person', 'motorcycle')
 
 project_root = ''
-data_root = '../Dataset/'
+data_root = 'Dataset/'
 
 img_scale = (832, 832)  # height, width
 
@@ -34,7 +34,7 @@ data = dict(
         type='MultiImageMixDataset',
         dataset=dict(
             type=dataset_type,
-            ann_file=data_root + 'SuperResolution_Training_Sliced.json',
+            ann_file=data_root + 'SuperResolution_Training_Sliced_coco.json',
             img_prefix=data_root + 'SuperResolution_Training_Sliced',
             classes=classes,
             pipeline=[dict(type='LoadImageFromFile'),

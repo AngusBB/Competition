@@ -1,9 +1,9 @@
 from sahi.slicing import slice_coco
 
 coco_dict, coco_path = slice_coco(
-    coco_annotation_file_path="Dataset/SuperResolution_Training_COCO.json",
+    coco_annotation_file_path="Dataset/SuperResolution_Training_coco.json",
     image_dir="Dataset/SuperResolution_Training_Dataset/",
-    output_coco_annotation_file_name="Dataset/SuperResolution_Training_Sliced.json",
+    output_coco_annotation_file_name="../SuperResolution_Training_Sliced",
     ignore_negative_samples=False,
     output_dir="Dataset/SuperResolution_Training_Sliced/",
     slice_height=832,

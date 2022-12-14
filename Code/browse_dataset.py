@@ -106,7 +106,7 @@ def main():
             data.append(f'{classes[i]} {(labels[0] + labels[2]) / 2 / 1664} {(labels[1] + labels[3]) / 2 / 1664} '
                         f'{(labels[2] - labels[0]) / 1664} {(labels[3] - labels[1]) / 1664}\n')
 
-        f = open('../Dataset/SuperResolution_Training_Sliced_Augmentation/' 
+        f = open('Dataset/SuperResolution_Training_Sliced_Augmentation/'
                  + Path(item['filename']).name.split('.')[0] + '.txt', 'w')
         f.writelines(data)
         f.close()

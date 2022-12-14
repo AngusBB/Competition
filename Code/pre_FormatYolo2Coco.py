@@ -127,7 +127,7 @@ def get_args():
     )
     parser.add_argument(
         "--output",
-        default="Dataset/SuperResolution_Training_COCO.json",
+        default="Dataset/SuperResolution_Training_coco.json",
         type=str,
         help="Name the output json file",
     )
