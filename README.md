@@ -6,6 +6,8 @@
 
 ````
 conda create --name drone python=3.8
+conda activate drone
+
 git clone https://github.com/AngusBB/Competition.git
 cd Competition
 ````
