@@ -2,7 +2,7 @@
 
 ## 0. Pre-processing：
 
-###0-1. Clone Project
+### 0-1. Clone Project
 
 ````
 conda create --name drone python=3.8
