@@ -10,6 +10,7 @@ candidate_2 = '3'
 # ======================================== Load Files ========================================
 answer_root = "yolov5/runs/detect/"
 os.mkdir(f'{answer_root}exp{candidate_1}_{candidate_2}')
+os.mkdir(f'{answer_root}exp{candidate_1}_{candidate_2}/labels')
 
 candidate_1_root = f'{answer_root}exp{candidate_1}/labels/'
 candidate_2_root = f'{answer_root}exp{candidate_2}/labels/'
@@ -45,6 +46,8 @@ if len(candidate_2_list) != 1000:
 #     quit()
 
 # ======================================== WBF ========================================
+print('Start WBF...')
+
 for i in range(1000):
     # x1, y1, x2, y2.
     bboxes_list = [[], []]
@@ -107,6 +110,6 @@ for i in range(1000):
         data.append(f'{round(labels[j])} {(bboxes[j][0] + bboxes[j][2]) / 2} {(bboxes[j][1] + bboxes[j][3]) / 2} '
                     f'{bboxes[j][2] - bboxes[j][0]} {bboxes[j][3] - bboxes[j][1]} {scores[j]}\n')
 
-    f_ans = open(f'{answer_root}exp{candidate_1}_{candidate_2}/img{(1001 + i):04d}.txt', 'w')
+    f_ans = open(f'{answer_root}exp{candidate_1}_{candidate_2}/labels/img{(1001 + i):04d}.txt', 'w')
     f_ans.writelines(data)
     f_ans.close()
