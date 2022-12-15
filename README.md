@@ -116,6 +116,8 @@ Please place our custom dataset in following structure.
    │          └── 832x832.pt
    │   
    ├── Code
+   ├── Output
+   ├── .gitignore
    ├── main.ipynb
    ├── README.md
    └── requirements.txt
